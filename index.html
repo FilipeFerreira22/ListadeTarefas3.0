@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-bar">
+            <a href="comparacao-codigos.html" class="nav-link">Apresentação</a>
+        </div>
+        
+        <h1>Minha Lista de Tarefas</h1>
+        
+        <div class="input-container">
+            <div class="input-row">
+                <input type="text" id="tarefa" placeholder="Digite uma nova tarefa...">
+                <input type="date" id="data-vencimento">
+                <select id="categoria">
+                    <option value="pessoal">Pessoal</option>
+                    <option value="trabalho">Trabalho</option>
+                    <option value="estudos">Estudos</option>
+                </select>
+                <button id="adicionar">Adicionar</button>
+            </div>
+        </div>
+        
+        <div class="filtros">
+            <button id="todas" class="ativo">Todas</button>
+            <button id="ativas">Ativas</button>
+            <button id="completas">Completas</button>
+            <button id="pessoal">Pessoal</button>
+            <button id="trabalho">Trabalho</button>
+            <button id="estudos">Estudos</button>
+        </div>
+        
+        <div class="ordenacao">
+            <button id="ordenar-data">Ordenar por Data</button>
+            <button id="ordenar-texto">Ordenar por Ordem Alfabética</button>
+            <button id="ordenar-status">Ordenar por Status</button>
+        </div>
+        
+        <ul id="lista-tarefas">
+            <!-- Tarefas serão adicionadas aqui pelo JavaScript -->
+        </ul>
+        
+        <div class="estatisticas">
+            <div class="sumario" id="sumario">
+                Total de tarefas: 0 | Completas: 0 | Pendentes: 0
+            </div>
+            <div class="grafico" id="grafico">
+                <!-- Gráfico será gerado pelo JavaScript -->
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
